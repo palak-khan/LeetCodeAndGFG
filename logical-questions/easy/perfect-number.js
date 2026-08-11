@@ -9,4 +9,5 @@ function check_perfect(n) {
   return n == sum ? true : false;
 }
 console.log(check_perfect(6));
-  
+
+
