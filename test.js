@@ -1,9 +1,18 @@
-import http from 'http';
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello, World!\n');
-});
+let name = "A man, a plan, a canal: Panama"
+name = name.replaceAll(" ","")
+name = name.replace(/[^a-zA-Z0-9]/g, '');
+name = name.toLowerCase();
+console.log(name);
 
-server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000/');
-});
+let left = 0;
+let right = name.length - 1;
+for(let i = 0; i < name.length; i++){
+    if(name[left]==name[right]){
+        console.log("Match");
+        left ++;
+        right --;
+    }
+    else{
+        return console.log("Not match")
+    }
+}
